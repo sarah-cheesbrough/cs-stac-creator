@@ -1,0 +1,142 @@
+{
+  "id": "cs-stac",
+  "title": "IPP Common Sensing Geospatial Datasets",
+  "description":"A catalog of optical and synthetic aperture radar (SAR) satellite datasets and derived products. Hosted by Satellite Applications Catapult.",
+  "extensions": [
+    "eo", "projection", "product_definition"
+  ],
+  "output_url": "https://s3-uk-1.sa-catapult.co.uk/public-eo-data/stac_catalogs/cs_stac",
+  "collections": [
+    {
+      "id": "sentinel_2",
+      "title": "Copernicus Sentinel-2 datasets",
+      "description":"A collection of Sentinel-2 datasets. Obtained from Copernicus Hub and Google Cloud and prepared by Catapult.",
+      "providers": [
+        {
+          "name": "European Space Agency",
+          "roles": ["producer", "licensor"],
+          "url": "https://www.esa.int/"
+        },
+        {
+          "name": "Satellite Applications Catapult",
+          "roles": ["processor", "host"],
+          "url": "https://sa.catapult.org.uk/"
+        }
+      ],
+      "dataset": {
+        "url": "tests/data/sentinel_2",
+        "date": {
+          "regex": "(\\d{8}T\\d{6})",
+          "format": "%Y%m%dT%H%M%S"
+        }
+      },
+      "common_metadata": {
+        "gsd": 10,
+        "instruments": ["msi"],
+        "constellation": "sentinel_2",
+        "platform": "sentinel_2"
+      },
+      "extensions": {
+        "eo": {
+          "cloud_cover": 0.0,
+          "bands": {
+              "AOT_10m": "aot",
+              "B01_60m": "coastal",
+              "B02_10m": "blue",
+              "B03_10m": "green",
+              "B04_10m": "red",
+              "B05_20m": "something",
+              "B06_20m": "something",
+              "B07_20m": "something",
+              "B08_10m": "nir",
+              "B8A_20m": "nir08",
+              "B09_60m": "nir09",
+              "B11_20m": "swir16",
+              "B12_20m": "swir22",
+              "SCL_20m": "scene_classification",
+              "WVP_10m": "something"
+          }
+        },
+        "projection": {
+          "epsg": 4326
+        },
+        "product_definition": {
+          "metadata_type": "eo3",
+          "metadata": {
+            "product":{
+              "name":"sentinel_2"
+            }
+          },
+          "measurements":[
+            {
+                "name": "aot",
+                "units": "1",
+                "dtype": "uint16",
+                "nodata": 0
+            },
+            {
+                "name": "coastal",
+                "units": "1",
+                "dtype": "uint16",
+                "nodata": 0
+            },
+            {
+                "name": "blue",
+                "units": "1",
+                "dtype": "uint16",
+                "nodata": 0
+            },
+            {
+                "name": "green",
+                "units": "1",
+                "dtype": "uint16",
+                "nodata": 0
+            },
+            {
+                "name": "red",
+                "units": "1",
+                "dtype": "uint16",
+                "nodata": 0
+            },
+            {
+                "name": "nir",
+                "units": "1",
+                "dtype": "uint16",
+                "nodata": 0
+            },
+            {
+                "name": "nir08",
+                "units": "1",
+                "dtype": "uint16",
+                "nodata": 0
+            },
+            {
+                "name": "nir09",
+                "units": "1",
+                "dtype": "uint16",
+                "nodata": 0
+            },
+            {
+                "name": "swir16",
+                "units": "1",
+                "dtype": "uint16",
+                "nodata": 0
+            },
+            {
+                "name": "swir22",
+                "units": "1",
+                "dtype": "uint16",
+                "nodata": 0
+            },
+            {
+                "name": "scene_classification",
+                "units": "1",
+                "dtype": "uint8",
+                "nodata": 0
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
