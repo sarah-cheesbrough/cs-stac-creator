@@ -1,4 +1,3 @@
-from pathlib import Path
 from typing import List
 
 from src.sac_stac.domain.s3 import S3
