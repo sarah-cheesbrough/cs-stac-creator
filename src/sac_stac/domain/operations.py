@@ -1,17 +1,22 @@
+import logging
 import re
 from datetime import datetime
 from pathlib import Path
 from typing import Tuple
 
-import rasterio
-from pystac import Collection, STAC_EXTENSIONS, Provider, Asset, MediaType, Item
-from pystac.extensions.eo import Band
-from rasterio import MemoryFile
+from pystac import Collection, STAC_EXTENSIONS, Provider, Item
+from rasterio import MemoryFile, RasterioIOError
 from rasterio.crs import CRS
 from shapely.geometry import box, Polygon
 
 from src.sac_stac.domain.extensions import register_product_definition_extension
+from src.sac_stac.load_config import LOG_LEVEL, LOG_FORMAT
 from src.sac_stac.util import extract_common_prefix
+
+
+logging.basicConfig(level=LOG_LEVEL, format=LOG_FORMAT)
+
+logger = logging.getLogger(__name__)
 
 
 def obtain_date_from_filename(file: str, regex: str, date_format: str) -> datetime:
@@ -42,10 +47,20 @@ def get_geometry_from_raster(raster: bytes) -> Tuple[Polygon, CRS]:
     return geom, crs
 
 
-def get_bands_from_assets(assets: list) -> list:
-    asset_names = [Path(a).stem for a in assets]
-    common_prefix = extract_common_prefix(asset_names)
-    return [b.replace(common_prefix, '') for b in asset_names]
+def get_projection_from_raster(raster: bytes) -> Tuple[list, list]:
+    try:
+        with MemoryFile(raster) as raster_file:
+            with raster_file.open() as ds:
+                return list(ds.shape), list(ds.transform)
+    except RasterioIOError as e:
+        logger.warning(e)
+        return [], []
+
+
+def get_bands_from_product_keys(product_keys: list) -> list:
+    product_names = [Path(a).stem for a in product_keys]
+    common_prefix = extract_common_prefix(product_names)
+    return [b.replace(common_prefix, '') for b in product_names]
 
 
 def add_product_definition_extension_to_collection(collection: Collection, product_definition: dict):
@@ -82,33 +97,3 @@ def add_extensions_to_item(item: Item, extensions_config: dict):
     if extensions_config.get('eo'):
         item.ext.enable('eo')
         item.ext.eo.cloud_cover = extensions_config.get('eo').get('cloud_cover')
-
-
-def get_asset_spatial(img_uri):
-    with rasterio.open(img_uri) as ds:
-        return list(ds.shape), list(ds.transform)
-
-
-def add_assets_to_item(item: Item, asset_names: list, collection_config: dict):
-
-    mapped_bands = collection_config.get('extensions').get('eo').get('bands')
-
-    bands = map(mapped_bands.get, get_bands_from_asset_name(asset_names))
-
-    for href, band in zip(asset_names, bands):
-        asset = Asset(href=href, media_type=MediaType.COG)
-
-        proj_shp, proj_tran = get_asset_spatial(href)  # TODO: Is this needed?
-        # Set Projection
-        item.ext.projection.set_transform(proj_tran, asset)
-        item.ext.projection.set_shape(proj_shp, asset)
-        # Set bands
-        item.ext.eo.set_bands([Band.create(
-            name=band, description='TBD', common_name=band)],
-            asset
-        )
-
-        item.add_asset(
-            key=band,
-            asset=asset
-        )

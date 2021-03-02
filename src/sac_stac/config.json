@@ -6,11 +6,18 @@
     "eo", "projection", "product_definition"
   ],
   "output_url": "https://s3-uk-1.sa-catapult.co.uk/public-eo-data/stac_catalogs/cs_stac",
-  "collections": [
+  "sensors": [
     {
       "id": "sentinel_2",
       "title": "Copernicus Sentinel-2 datasets",
       "description":"A collection of Sentinel-2 datasets. Obtained from Copernicus Hub and Google Cloud and prepared by Catapult.",
+      "s3_url": "https://s3-uk-1.sa-catapult.co.uk/public-eo-data/common_sensing/fiji/sentinel_2/",
+      "formatting": {
+        "date": {
+          "regex": "(\\d{8}T\\d{6})",
+          "format": "%Y%m%dT%H%M%S"
+        }
+      },
       "providers": [
         {
           "name": "European Space Agency",
@@ -23,13 +30,6 @@
           "url": "https://sa.catapult.org.uk/"
         }
       ],
-      "dataset": {
-        "url": "tests/data/sentinel_2",
-        "date": {
-          "regex": "(\\d{8}T\\d{6})",
-          "format": "%Y%m%dT%H%M%S"
-        }
-      },
       "common_metadata": {
         "gsd": 10,
         "instruments": ["msi"],
