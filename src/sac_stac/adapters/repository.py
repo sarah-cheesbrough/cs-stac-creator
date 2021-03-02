@@ -20,3 +20,6 @@ class S3Repository:
         product_objs_size = {p.size: p.key for p in product_objs if p.size > 1}
         product_min_size = min(list(product_objs_size.keys()))
         return self.s3.get_object_body(bucket_name=bucket, object_name=product_objs_size.get(product_min_size))
+
+    def get_product_raster(self, bucket: str, product_key: str) -> bytes:
+        return self.s3.get_object_body(bucket_name=bucket, object_name=product_key)

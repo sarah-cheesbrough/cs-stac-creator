@@ -87,3 +87,23 @@ def test_get_smallest_product_sample():
         raster = r.read()
 
     assert product == raster
+
+
+@mock_s3
+def test_get_product_raster():
+    s3 = S3(key=None, secret=None, s3_endpoint=None, region_name='us-east-1')
+    initialise_cs_bucket(s3_resource=s3.s3_resource, bucket_name=BUCKET)
+
+    repo = repository.S3Repository(s3)
+    product = repo.get_product_raster(bucket=BUCKET,
+                                      product_key='common_sensing/fiji/sentinel_2/'
+                                                  'S2A_MSIL2A_20151022T222102_T01KBU/'
+                                                  'S2A_MSIL2A_20151022T222102_T01KBU_B02_10m.tif')
+
+    file = 'tests/data/sentinel_2/S2A_MSIL2A_20151022T222102_T01KBU/S2A_MSIL2A_20151022T222102_T01KBU_B02_10m.tif'
+
+    # Open raster file as bytes
+    with open(file, "rb") as r:
+        raster = r.read()
+
+    assert product == raster
