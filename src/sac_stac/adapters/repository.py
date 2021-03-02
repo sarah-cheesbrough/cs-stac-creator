@@ -9,12 +9,12 @@ class S3Repository:
     def __init__(self, s3: S3):
         self.s3 = s3
 
-    def get_acquisitions_from_sensor(self, bucket: str, sensor_prefix: str) -> List[str]:
+    def get_acquisition_keys_from_sensor(self, bucket: str, sensor_prefix: str) -> List[str]:
         return self.s3.list_common_prefixes(bucket_name=bucket, prefix=sensor_prefix)
 
-    def get_products_from_acquisition(self, bucket: str, acquisitions_prefix: str) -> List[str]:
+    def get_product_keys_from_acquisition(self, bucket: str, acquisitions_prefix: str) -> List[str]:
         product_objs = self.s3.list_objects(bucket_name=bucket, prefix=acquisitions_prefix, suffix='.tif')
-        return [Path(p.key).stem for p in product_objs]
+        return [p.key for p in product_objs]
 
     def get_smallest_product_sample(self, bucket: str, acquisitions_prefix: str) -> bytes:
         product_objs = self.s3.list_objects(bucket_name=bucket, prefix=acquisitions_prefix, suffix='.tif')
