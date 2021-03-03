@@ -4,7 +4,8 @@ from datetime import datetime
 from pathlib import Path
 from typing import Tuple
 
-from rasterio import MemoryFile, RasterioIOError
+import rasterio
+from rasterio import RasterioIOError
 from rasterio.crs import CRS
 from shapely.geometry import box, Polygon
 
@@ -37,25 +38,50 @@ def obtain_date_from_filename(file: str, regex: str, date_format: str) -> dateti
     return date
 
 
-def get_geometry_from_raster(raster: bytes) -> Tuple[Polygon, CRS]:
-    with MemoryFile(raster) as raster_file:
-        with raster_file.open() as ds:
+def get_geometry_from_cog(cog_url: str) -> Tuple[Polygon, CRS]:
+    """
+    Extract geometry information out of the COG file served under
+    the given url.
+
+    :param cog_url: url to cog file
+
+    :return: A Polygon and CRS objects.
+    """
+    try:
+        with rasterio.open(cog_url) as ds:
             geom = box(*ds.bounds)
             crs = ds.crs
-    return geom, crs
-
-
-def get_projection_from_raster(raster: bytes) -> Tuple[list, list]:
-    try:
-        with MemoryFile(raster) as raster_file:
-            with raster_file.open() as ds:
-                return list(ds.shape), list(ds.transform)
+        return geom, crs
     except RasterioIOError as e:
-        logger.warning(e)
+        logger.warning(f"Error extracting geometry from {cog_url}: {e}")
+        return Polygon(), CRS()
+
+
+def get_projection_from_cog(cog_url: str) -> Tuple[list, list]:
+    """
+    Extract projection information out of the COG file served under
+    the given url.
+
+    :param cog_url: url to cog file
+
+    :return: A shape and transform lists.
+    """
+    try:
+        with rasterio.open(cog_url) as ds:
+            return list(ds.shape), list(ds.transform)
+    except RasterioIOError as e:
+        logger.warning(f"Error extracting projection from {cog_url}: {e}")
         return [], []
 
 
 def get_bands_from_product_keys(product_keys: list) -> list:
+    """
+    Obtain a list of bands used for the given product keys.
+
+    :param product_keys: list of S3 keys for products.
+
+    :return: list of band names.
+    """
     product_names = [Path(a).stem for a in product_keys]
     common_prefix = extract_common_prefix(product_names)
     return [b.replace(common_prefix, '') for b in product_names]
