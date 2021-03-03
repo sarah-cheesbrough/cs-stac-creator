@@ -28,3 +28,9 @@ def parse_s3_url(url: str) -> Tuple[str, str]:
 
 def get_rel_links(metadata: dict, rel: str) -> List[str]:
     return [link.get('href') for link in metadata.get('links') if link.get('rel') == rel]
+
+
+def unparse_s3_url(s3_url: str, key: str) -> str:
+    url = f"{urlparse(s3_url).scheme}://{urlparse(s3_url).hostname}"
+    bucket = urlparse(s3_url).path.split('/')[1]
+    return f"{url}/{bucket}/{key}"
