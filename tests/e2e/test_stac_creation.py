@@ -27,9 +27,9 @@ def initialise_s3_bucket(sensor_name, s3_resource, bucket_name):
 
 def initialise_http_server(sensor_name: str):
     for file in Path(f'tests/data/{sensor_name}').glob('**/*.tif'):
+        url = "https://s3-uk-1.sa-catapult.co.uk/public-eo-data/common_sensing" \
+              f"/fiji/{sensor_name}/{file.parent.name}/{file.name}"
         with open(file, "rb") as cog_file:
-            url = "https://s3-uk-1.sa-catapult.co.uk/public-eo-data/common_sensing" \
-                  f"/fiji/{sensor_name}/{file.stem}/{file.name}"
             responses.add(
                 responses.GET,
                 url,
@@ -65,7 +65,10 @@ def test_stac_files_creation():
             properties={}
         )
         collection.add_providers(sensor)
-        collection.add_product_definition_extension(sensor.get('extensions').get('product_definition'))
+        collection.add_product_definition_extension(
+            product_definition=sensor.get('extensions').get('product_definition'),
+            bands_metadata=sensor.get('extensions').get('eo').get('bands')
+        )
 
         # Get sensor url to S3 bucket
         sensor_url = sensor.get('s3_url')
@@ -107,7 +110,8 @@ def test_stac_files_creation():
             item.add_extensions(sensor.get('extensions'))
             item.add_common_metadata(sensor.get('common_metadata'))
 
-            mapped_bands = sensor.get('extensions').get('eo').get('bands')
+            bands_metadata = sensor.get('extensions').get('eo').get('bands')
+            mapped_bands = {b.get('name'): b.get('common_name') for b in bands_metadata}
             product_keys = repo.get_product_keys(bucket=bucket, products_prefix=acquisition_key)
             bands = map(mapped_bands.get, get_bands_from_product_keys(product_keys))
 

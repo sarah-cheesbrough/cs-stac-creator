@@ -13,13 +13,15 @@ class SacCollection(Collection):
 
         self.providers = providers
 
-    def add_product_definition_extension(self, product_definition: dict):
+    def add_product_definition_extension(self, product_definition: dict, bands_metadata: list):
         if not STAC_EXTENSIONS.is_registered_extension('product_definition'):
             register_product_definition_extension()
         self.ext.enable('product_definition')
         self.ext.product_definition.metadata_type = product_definition.get('metadata_type')
         self.ext.product_definition.metadata = product_definition.get('metadata')
-        self.ext.product_definition.measurements = product_definition.get('measurements')
+        a = [{'name': v for k, v in d.items() if k == 'common_name'} for d in bands_metadata]
+        b = [{k: v for k, v in d.items() if k != 'common_name' and k != 'name'} for d in bands_metadata]
+        self.ext.product_definition.measurements = [x | y for x, y in zip(a, b)]
 
 
 class SacItem(Item):

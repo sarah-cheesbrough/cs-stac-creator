@@ -116,6 +116,24 @@
             "nodata":0
          },
          {
+            "name":"something",
+            "units":"1",
+            "dtype":"uint16",
+            "nodata":0
+         },
+         {
+            "name":"something",
+            "units":"1",
+            "dtype":"uint16",
+            "nodata":0
+         },
+         {
+            "name":"something",
+            "units":"1",
+            "dtype":"uint16",
+            "nodata":0
+         },
+         {
             "name":"nir",
             "units":"1",
             "dtype":"uint16",
@@ -149,6 +167,12 @@
             "name":"scene_classification",
             "units":"1",
             "dtype":"uint8",
+            "nodata":0
+         },
+         {
+            "name":"something",
+            "units":"1",
+            "dtype":"uint16",
             "nodata":0
          }
       ]

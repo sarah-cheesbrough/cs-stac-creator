@@ -39,23 +39,113 @@
       "extensions": {
         "eo": {
           "cloud_cover": 0.0,
-          "bands": {
-              "AOT_10m": "aot",
-              "B01_60m": "coastal",
-              "B02_10m": "blue",
-              "B03_10m": "green",
-              "B04_10m": "red",
-              "B05_20m": "something",
-              "B06_20m": "something",
-              "B07_20m": "something",
-              "B08_10m": "nir",
-              "B8A_20m": "nir08",
-              "B09_60m": "nir09",
-              "B11_20m": "swir16",
-              "B12_20m": "swir22",
-              "SCL_20m": "scene_classification",
-              "WVP_10m": "something"
-          }
+          "bands": [
+            {
+              "name": "AOT_10m",
+              "common_name": "aot",
+              "units": "1",
+              "dtype": "uint16",
+              "nodata": 0
+            },
+            {
+              "name": "B01_60m",
+              "common_name": "coastal",
+              "units": "1",
+              "dtype": "uint16",
+              "nodata": 0
+            },
+            {
+              "name": "B02_10m",
+              "common_name": "blue",
+              "units": "1",
+              "dtype": "uint16",
+              "nodata": 0
+            },
+            {
+              "name": "B03_10m",
+              "common_name": "green",
+              "units": "1",
+              "dtype": "uint16",
+              "nodata": 0
+            },
+            {
+              "name": "B04_10m",
+              "common_name": "red",
+              "units": "1",
+              "dtype": "uint16",
+              "nodata": 0
+            },
+            {
+              "name": "B05_20m",
+              "common_name": "something",
+              "units": "1",
+              "dtype": "uint16",
+              "nodata": 0
+            },
+            {
+              "name": "B06_20m",
+              "common_name": "something",
+              "units": "1",
+              "dtype": "uint16",
+              "nodata": 0
+            },
+            {
+              "name": "B07_20m",
+              "common_name": "something",
+              "units": "1",
+              "dtype": "uint16",
+              "nodata": 0
+            },
+            {
+              "name": "B08_10m",
+              "common_name": "nir",
+              "units": "1",
+              "dtype": "uint16",
+              "nodata": 0
+            },
+            {
+              "name": "B8A_20m",
+              "common_name": "nir08",
+              "units": "1",
+              "dtype": "uint16",
+              "nodata": 0
+            },
+            {
+              "name": "B09_60m",
+              "common_name": "nir09",
+              "units": "1",
+              "dtype": "uint16",
+              "nodata": 0
+            },
+            {
+              "name": "B11_20m",
+              "common_name": "swir16",
+              "units": "1",
+              "dtype": "uint16",
+              "nodata": 0
+            },
+            {
+              "name": "B12_20m",
+              "common_name": "swir22",
+              "units": "1",
+              "dtype": "uint16",
+              "nodata": 0
+            },
+            {
+              "name": "SCL_20m",
+              "common_name": "scene_classification",
+              "units": "1",
+              "dtype": "uint8",
+              "nodata": 0
+            },
+            {
+              "name": "WVP_10m",
+              "common_name": "something",
+              "units": "1",
+              "dtype": "uint16",
+              "nodata": 0
+            }
+          ]
         },
         "projection": {
           "epsg": 4326
@@ -66,75 +156,7 @@
             "product":{
               "name":"sentinel_2"
             }
-          },
-          "measurements":[
-            {
-                "name": "aot",
-                "units": "1",
-                "dtype": "uint16",
-                "nodata": 0
-            },
-            {
-                "name": "coastal",
-                "units": "1",
-                "dtype": "uint16",
-                "nodata": 0
-            },
-            {
-                "name": "blue",
-                "units": "1",
-                "dtype": "uint16",
-                "nodata": 0
-            },
-            {
-                "name": "green",
-                "units": "1",
-                "dtype": "uint16",
-                "nodata": 0
-            },
-            {
-                "name": "red",
-                "units": "1",
-                "dtype": "uint16",
-                "nodata": 0
-            },
-            {
-                "name": "nir",
-                "units": "1",
-                "dtype": "uint16",
-                "nodata": 0
-            },
-            {
-                "name": "nir08",
-                "units": "1",
-                "dtype": "uint16",
-                "nodata": 0
-            },
-            {
-                "name": "nir09",
-                "units": "1",
-                "dtype": "uint16",
-                "nodata": 0
-            },
-            {
-                "name": "swir16",
-                "units": "1",
-                "dtype": "uint16",
-                "nodata": 0
-            },
-            {
-                "name": "swir22",
-                "units": "1",
-                "dtype": "uint16",
-                "nodata": 0
-            },
-            {
-                "name": "scene_classification",
-                "units": "1",
-                "dtype": "uint8",
-                "nodata": 0
-            }
-          ]
+          }
         }
       }
     }
