@@ -9,7 +9,7 @@ BUCKET = 'test'
 
 def initialise_bucket(s3_resource, bucket_name):
     s3_resource.create_bucket(Bucket=bucket_name)
-    for file in Path('tests/data/sentinel_2').glob('**/*.tif'):
+    for file in Path('tests/data/common_sensing/fiji/sentinel_2').glob('**/*.tif'):
         s3_resource.Bucket(bucket_name).upload_file(
             Filename=str(file),
             Key=f"common_sensing/fiji/sentinel_2/{file.parent.stem}/{file.name}"
