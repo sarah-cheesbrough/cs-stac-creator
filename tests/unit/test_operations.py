@@ -89,5 +89,6 @@ def test_get_bands_from_product_keys():
     assets = get_files_from_dir('tests/data/common_sensing/fiji/sentinel_2/S2A_MSIL2A_20151022T222102_T01KBU', 'tif')
     bands = get_bands_from_product_keys(assets)
 
-    assert bands == ['B01_60m', 'B03_10m', 'SCL_20m', 'B09_60m', 'B02_10m', 'B11_20m', 'B12_20m', 'B08_10m',
-                     'B04_10m', 'B07_20m', 'B8A_20m', 'AOT_10m', 'B06_20m', 'WVP_10m', 'B05_20m']
+    assert sorted(bands) == sorted(['B01_60m', 'B03_10m', 'SCL_20m', 'B09_60m', 'B02_10m', 'B11_20m', 'B12_20m',
+                                    'B08_10m', 'B04_10m', 'B07_20m', 'B8A_20m', 'AOT_10m', 'B06_20m', 'WVP_10m',
+                                    'B05_20m'])
