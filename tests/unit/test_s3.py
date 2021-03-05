@@ -62,4 +62,3 @@ def test_list_common_prefixes_not_exist():
     objs = s3.list_common_prefixes(bucket_name=BUCKET, prefix='common_sensing/fiji/sentinel_3/')
 
     assert not objs
-

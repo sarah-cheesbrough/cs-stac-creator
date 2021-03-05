@@ -12,7 +12,7 @@ from sac_stac.domain.operations import obtain_date_from_filename, get_geometry_f
     get_bands_from_product_keys, get_projection_from_cog
 from sac_stac.domain.s3 import S3
 from sac_stac.load_config import config
-from sac_stac.util import parse_s3_url, unparse_s3_url, load_json
+from sac_stac.util import parse_s3_url, load_json
 
 
 def initialise_s3_bucket(sensor_name, s3_resource, bucket_name):
