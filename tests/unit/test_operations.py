@@ -54,9 +54,9 @@ def test_get_geometry_from_cog():
     assert crs == CRS.from_user_input(32701)
 
 
-def test_get_geometry_from_offline():
+def test_get_geometry_from_cog_offline():
 
-    url = 'https://s3-uk-1.sa-catapult.co.uk/public-eo-data/nothing/here'
+    url = 'fake/url/nothing/here'
 
     geometry, crs = get_geometry_from_cog(url)
 
@@ -77,7 +77,7 @@ def test_get_projection_from_cog():
 
 def test_get_projection_from_cog_offline():
 
-    url = 'https://s3-uk-1.sa-catapult.co.uk/public-eo-data/nothing/here'
+    url = 'fake/url/nothing/here'
 
     proj_shp, proj_tran = get_projection_from_cog(url)
 
