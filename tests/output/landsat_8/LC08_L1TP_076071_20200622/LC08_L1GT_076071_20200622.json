@@ -44,7 +44,23 @@
       }
    ],
    "assets":{
+      "coastal":{
+         "href":"common_sensing/fiji/landsat_8/LC08_L1TP_076071_20200622/LC08_L1GT_076071_20200622_20200707_01_T2_sr_band1f",
+         "type":"image/tiff; application=geotiff; profile=cloud-optimized",
+         "proj:transform":[
 
+         ],
+         "proj:shape":[
+
+         ],
+         "eo:bands":[
+            {
+               "name":"aot",
+               "common_name":"aot",
+               "description":"TBD"
+            }
+         ]
+      }
    },
    "bbox":[
 
