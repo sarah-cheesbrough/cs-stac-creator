@@ -1,7 +1,7 @@
 from pathlib import Path
 
 from moto import mock_s3
-from src.sac_stac.domain.s3 import S3
+from sac_stac.domain.s3 import S3
 
 
 BUCKET = 'test'
@@ -9,7 +9,7 @@ BUCKET = 'test'
 
 def initialise_bucket(s3_resource, bucket_name):
     s3_resource.create_bucket(Bucket=bucket_name)
-    for file in Path('tests/data/sentinel_2').glob('**/*.tif'):
+    for file in Path('tests/data/common_sensing/fiji/sentinel_2').glob('**/*.tif'):
         s3_resource.Bucket(bucket_name).upload_file(
             Filename=str(file),
             Key=f"common_sensing/fiji/sentinel_2/{file.parent.stem}/{file.name}"
@@ -62,4 +62,3 @@ def test_list_common_prefixes_not_exist():
     objs = s3.list_common_prefixes(bucket_name=BUCKET, prefix='common_sensing/fiji/sentinel_3/')
 
     assert not objs
-

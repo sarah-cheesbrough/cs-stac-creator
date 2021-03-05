@@ -1,6 +1,6 @@
 from moto import mock_s3
-from src.sac_stac.adapters import repository
-from src.sac_stac.domain.s3 import S3
+from sac_stac.adapters import repository
+from sac_stac.domain.s3 import S3
 from pathlib import Path
 
 BUCKET = 'public-eo-data'
@@ -95,7 +95,8 @@ def test_get_product_raster():
                                                   'S2A_MSIL2A_20151022T222102_T01KBU/'
                                                   'S2A_MSIL2A_20151022T222102_T01KBU_B02_10m.tif')
 
-    file = 'tests/data/common_sensing/fiji/sentinel_2/S2A_MSIL2A_20151022T222102_T01KBU/S2A_MSIL2A_20151022T222102_T01KBU_B02_10m.tif'
+    file = 'tests/data/common_sensing/fiji/sentinel_2/S2A_MSIL2A_20151022T222102_T01KBU/' \
+           'S2A_MSIL2A_20151022T222102_T01KBU_B02_10m.tif'
 
     # Open raster file as bytes
     with open(file, "rb") as r:
