@@ -93,19 +93,10 @@
          "href":"common_sensing/fiji/sentinel_2/S2B_MSIL2A_20191023T220919_T01KBB/S2B_MSIL2A_20191023T220919_T01KBB_B01_60m.tif",
          "type":"image/tiff; application=geotiff; profile=cloud-optimized",
          "proj:transform":[
-            60.0,
-            0.0,
-            199980.0,
-            0.0,
-            -60.0,
-            8200000.0,
-            0.0,
-            0.0,
-            1.0
+
          ],
          "proj:shape":[
-            1830,
-            1830
+
          ],
          "eo:bands":[
             {
@@ -119,19 +110,10 @@
          "href":"common_sensing/fiji/sentinel_2/S2B_MSIL2A_20191023T220919_T01KBB/S2B_MSIL2A_20191023T220919_T01KBB_B02_10m.tif",
          "type":"image/tiff; application=geotiff; profile=cloud-optimized",
          "proj:transform":[
-            10.0,
-            0.0,
-            199980.0,
-            0.0,
-            -10.0,
-            8200000.0,
-            0.0,
-            0.0,
-            1.0
+
          ],
          "proj:shape":[
-            10980,
-            10980
+
          ],
          "eo:bands":[
             {
@@ -145,19 +127,10 @@
          "href":"common_sensing/fiji/sentinel_2/S2B_MSIL2A_20191023T220919_T01KBB/S2B_MSIL2A_20191023T220919_T01KBB_B03_10m.tif",
          "type":"image/tiff; application=geotiff; profile=cloud-optimized",
          "proj:transform":[
-            10.0,
-            0.0,
-            199980.0,
-            0.0,
-            -10.0,
-            8200000.0,
-            0.0,
-            0.0,
-            1.0
+
          ],
          "proj:shape":[
-            10980,
-            10980
+
          ],
          "eo:bands":[
             {
@@ -171,19 +144,10 @@
          "href":"common_sensing/fiji/sentinel_2/S2B_MSIL2A_20191023T220919_T01KBB/S2B_MSIL2A_20191023T220919_T01KBB_B04_10m.tif",
          "type":"image/tiff; application=geotiff; profile=cloud-optimized",
          "proj:transform":[
-            10.0,
-            0.0,
-            199980.0,
-            0.0,
-            -10.0,
-            8200000.0,
-            0.0,
-            0.0,
-            1.0
+
          ],
          "proj:shape":[
-            10980,
-            10980
+
          ],
          "eo:bands":[
             {
@@ -197,19 +161,10 @@
          "href":"common_sensing/fiji/sentinel_2/S2B_MSIL2A_20191023T220919_T01KBB/S2B_MSIL2A_20191023T220919_T01KBB_WVP_10m.tif",
          "type":"image/tiff; application=geotiff; profile=cloud-optimized",
          "proj:transform":[
-            10.0,
-            0.0,
-            199980.0,
-            0.0,
-            -10.0,
-            8200000.0,
-            0.0,
-            0.0,
-            1.0
+
          ],
          "proj:shape":[
-            10980,
-            10980
+
          ],
          "eo:bands":[
             {
@@ -223,19 +178,10 @@
          "href":"common_sensing/fiji/sentinel_2/S2B_MSIL2A_20191023T220919_T01KBB/S2B_MSIL2A_20191023T220919_T01KBB_B08_10m.tif",
          "type":"image/tiff; application=geotiff; profile=cloud-optimized",
          "proj:transform":[
-            10.0,
-            0.0,
-            199980.0,
-            0.0,
-            -10.0,
-            8200000.0,
-            0.0,
-            0.0,
-            1.0
+
          ],
          "proj:shape":[
-            10980,
-            10980
+
          ],
          "eo:bands":[
             {
@@ -249,19 +195,10 @@
          "href":"common_sensing/fiji/sentinel_2/S2B_MSIL2A_20191023T220919_T01KBB/S2B_MSIL2A_20191023T220919_T01KBB_B09_60m.tif",
          "type":"image/tiff; application=geotiff; profile=cloud-optimized",
          "proj:transform":[
-            60.0,
-            0.0,
-            199980.0,
-            0.0,
-            -60.0,
-            8200000.0,
-            0.0,
-            0.0,
-            1.0
+
          ],
          "proj:shape":[
-            1830,
-            1830
+
          ],
          "eo:bands":[
             {
@@ -275,19 +212,10 @@
          "href":"common_sensing/fiji/sentinel_2/S2B_MSIL2A_20191023T220919_T01KBB/S2B_MSIL2A_20191023T220919_T01KBB_B11_20m.tif",
          "type":"image/tiff; application=geotiff; profile=cloud-optimized",
          "proj:transform":[
-            20.0,
-            0.0,
-            199980.0,
-            0.0,
-            -20.0,
-            8200000.0,
-            0.0,
-            0.0,
-            1.0
+
          ],
          "proj:shape":[
-            5490,
-            5490
+
          ],
          "eo:bands":[
             {
@@ -301,19 +229,10 @@
          "href":"common_sensing/fiji/sentinel_2/S2B_MSIL2A_20191023T220919_T01KBB/S2B_MSIL2A_20191023T220919_T01KBB_B12_20m.tif",
          "type":"image/tiff; application=geotiff; profile=cloud-optimized",
          "proj:transform":[
-            20.0,
-            0.0,
-            199980.0,
-            0.0,
-            -20.0,
-            8200000.0,
-            0.0,
-            0.0,
-            1.0
+
          ],
          "proj:shape":[
-            5490,
-            5490
+
          ],
          "eo:bands":[
             {
@@ -327,19 +246,10 @@
          "href":"common_sensing/fiji/sentinel_2/S2B_MSIL2A_20191023T220919_T01KBB/S2B_MSIL2A_20191023T220919_T01KBB_B8A_20m.tif",
          "type":"image/tiff; application=geotiff; profile=cloud-optimized",
          "proj:transform":[
-            20.0,
-            0.0,
-            199980.0,
-            0.0,
-            -20.0,
-            8200000.0,
-            0.0,
-            0.0,
-            1.0
+
          ],
          "proj:shape":[
-            5490,
-            5490
+
          ],
          "eo:bands":[
             {
@@ -353,19 +263,10 @@
          "href":"common_sensing/fiji/sentinel_2/S2B_MSIL2A_20191023T220919_T01KBB/S2B_MSIL2A_20191023T220919_T01KBB_SCL_20m.tif",
          "type":"image/tiff; application=geotiff; profile=cloud-optimized",
          "proj:transform":[
-            20.0,
-            0.0,
-            199980.0,
-            0.0,
-            -20.0,
-            8200000.0,
-            0.0,
-            0.0,
-            1.0
+
          ],
          "proj:shape":[
-            5490,
-            5490
+
          ],
          "eo:bands":[
             {

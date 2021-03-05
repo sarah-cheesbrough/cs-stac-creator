@@ -1,7 +1,6 @@
 import json
 from pathlib import Path
 
-import responses
 from geopandas import GeoSeries
 from moto import mock_s3
 from pystac import Catalog, Extent, TemporalExtent, SpatialExtent, Asset, MediaType
@@ -18,33 +17,13 @@ from src.sac_stac.util import parse_s3_url, unparse_s3_url, load_json
 
 def initialise_s3_bucket(sensor_name, s3_resource, bucket_name):
     s3_resource.create_bucket(Bucket=bucket_name)
-    for file in Path(f'tests/data/{sensor_name}').glob('**/*.tif'):
+    for file in Path(f'tests/data/common_sensing/fiji/{sensor_name}').glob('**/*.tif'):
         s3_resource.Bucket(bucket_name).upload_file(
             Filename=str(file),
             Key=f"common_sensing/fiji/{sensor_name}/{file.parent.stem}/{file.name}"
         )
 
 
-def initialise_http_server(sensor_name: str):
-    for file in Path(f'tests/data/{sensor_name}').glob('**/*.tif'):
-        url = "https://s3-uk-1.sa-catapult.co.uk/public-eo-data/common_sensing" \
-              f"/fiji/{sensor_name}/{file.parent.name}/{file.name}"
-        with open(file, "rb") as cog_file:
-            responses.add(
-                responses.GET,
-                url,
-                status=200,
-                stream=True,
-                body=cog_file.read(),
-                headers={
-                    'Content-Type': 'binary/octet-stream',
-                    'Accept-Ranges': 'bytes',
-                    'Server': 'CloudianS3'
-                }
-            )
-
-
-@responses.activate
 @mock_s3
 def test_stac_files_creation():
 
@@ -91,11 +70,10 @@ def test_stac_files_creation():
                 regex=date_regex,
                 date_format=date_format)
 
-            initialise_http_server(sensor_name=sensor.get('id'))
-
             # Get sample product and extract geometry
             product_sample = repo.get_smallest_product_key(bucket=bucket, products_prefix=acquisition_key)
-            product_sample = unparse_s3_url(sensor_url, product_sample)
+            #                  ** ONLY FOR TESTING **
+            product_sample = f'tests/data/{product_sample}'
             geometry, crs = get_geometry_from_cog(product_sample)
 
             item = SacItem(
@@ -121,8 +99,8 @@ def test_stac_files_creation():
                     media_type=MediaType.COG
                 )
 
-                # Set Projection
-                proj_shp, proj_tran = get_projection_from_cog(unparse_s3_url(sensor_url, product_key))
+                # Set Projection                                         ** ONLY FOR TESTING **
+                proj_shp, proj_tran = get_projection_from_cog(f'tests/data/{product_key}')
                 item.ext.projection.set_transform(proj_tran, asset)
                 item.ext.projection.set_shape(proj_shp, asset)
 

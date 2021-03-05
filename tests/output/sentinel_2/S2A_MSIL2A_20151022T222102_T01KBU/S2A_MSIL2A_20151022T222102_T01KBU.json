@@ -119,136 +119,6 @@
          "href":"common_sensing/fiji/sentinel_2/S2A_MSIL2A_20151022T222102_T01KBU/S2A_MSIL2A_20151022T222102_T01KBU_B02_10m.tif",
          "type":"image/tiff; application=geotiff; profile=cloud-optimized",
          "proj:transform":[
-            10.0,
-            0.0,
-            199980.0,
-            0.0,
-            -10.0,
-            7900000.0,
-            0.0,
-            0.0,
-            1.0
-         ],
-         "proj:shape":[
-            10980,
-            10980
-         ],
-         "eo:bands":[
-            {
-               "name":"blue",
-               "common_name":"blue",
-               "description":"TBD"
-            }
-         ]
-      },
-      "green":{
-         "href":"common_sensing/fiji/sentinel_2/S2A_MSIL2A_20151022T222102_T01KBU/S2A_MSIL2A_20151022T222102_T01KBU_B03_10m.tif",
-         "type":"image/tiff; application=geotiff; profile=cloud-optimized",
-         "proj:transform":[
-            10.0,
-            0.0,
-            199980.0,
-            0.0,
-            -10.0,
-            7900000.0,
-            0.0,
-            0.0,
-            1.0
-         ],
-         "proj:shape":[
-            10980,
-            10980
-         ],
-         "eo:bands":[
-            {
-               "name":"green",
-               "common_name":"green",
-               "description":"TBD"
-            }
-         ]
-      },
-      "red":{
-         "href":"common_sensing/fiji/sentinel_2/S2A_MSIL2A_20151022T222102_T01KBU/S2A_MSIL2A_20151022T222102_T01KBU_B04_10m.tif",
-         "type":"image/tiff; application=geotiff; profile=cloud-optimized",
-         "proj:transform":[
-            10.0,
-            0.0,
-            199980.0,
-            0.0,
-            -10.0,
-            7900000.0,
-            0.0,
-            0.0,
-            1.0
-         ],
-         "proj:shape":[
-            10980,
-            10980
-         ],
-         "eo:bands":[
-            {
-               "name":"red",
-               "common_name":"red",
-               "description":"TBD"
-            }
-         ]
-      },
-      "something":{
-         "href":"common_sensing/fiji/sentinel_2/S2A_MSIL2A_20151022T222102_T01KBU/S2A_MSIL2A_20151022T222102_T01KBU_WVP_10m.tif",
-         "type":"image/tiff; application=geotiff; profile=cloud-optimized",
-         "proj:transform":[
-            10.0,
-            0.0,
-            199980.0,
-            0.0,
-            -10.0,
-            7900000.0,
-            0.0,
-            0.0,
-            1.0
-         ],
-         "proj:shape":[
-            10980,
-            10980
-         ],
-         "eo:bands":[
-            {
-               "name":"something",
-               "common_name":"something",
-               "description":"TBD"
-            }
-         ]
-      },
-      "nir":{
-         "href":"common_sensing/fiji/sentinel_2/S2A_MSIL2A_20151022T222102_T01KBU/S2A_MSIL2A_20151022T222102_T01KBU_B08_10m.tif",
-         "type":"image/tiff; application=geotiff; profile=cloud-optimized",
-         "proj:transform":[
-            10.0,
-            0.0,
-            199980.0,
-            0.0,
-            -10.0,
-            7900000.0,
-            0.0,
-            0.0,
-            1.0
-         ],
-         "proj:shape":[
-            10980,
-            10980
-         ],
-         "eo:bands":[
-            {
-               "name":"nir",
-               "common_name":"nir",
-               "description":"TBD"
-            }
-         ]
-      },
-      "nir09":{
-         "href":"common_sensing/fiji/sentinel_2/S2A_MSIL2A_20151022T222102_T01KBU/S2A_MSIL2A_20151022T222102_T01KBU_B09_60m.tif",
-         "type":"image/tiff; application=geotiff; profile=cloud-optimized",
-         "proj:transform":[
             60.0,
             0.0,
             199980.0,
@@ -265,6 +135,91 @@
          ],
          "eo:bands":[
             {
+               "name":"blue",
+               "common_name":"blue",
+               "description":"TBD"
+            }
+         ]
+      },
+      "green":{
+         "href":"common_sensing/fiji/sentinel_2/S2A_MSIL2A_20151022T222102_T01KBU/S2A_MSIL2A_20151022T222102_T01KBU_B03_10m.tif",
+         "type":"image/tiff; application=geotiff; profile=cloud-optimized",
+         "proj:transform":[
+
+         ],
+         "proj:shape":[
+
+         ],
+         "eo:bands":[
+            {
+               "name":"green",
+               "common_name":"green",
+               "description":"TBD"
+            }
+         ]
+      },
+      "red":{
+         "href":"common_sensing/fiji/sentinel_2/S2A_MSIL2A_20151022T222102_T01KBU/S2A_MSIL2A_20151022T222102_T01KBU_B04_10m.tif",
+         "type":"image/tiff; application=geotiff; profile=cloud-optimized",
+         "proj:transform":[
+
+         ],
+         "proj:shape":[
+
+         ],
+         "eo:bands":[
+            {
+               "name":"red",
+               "common_name":"red",
+               "description":"TBD"
+            }
+         ]
+      },
+      "something":{
+         "href":"common_sensing/fiji/sentinel_2/S2A_MSIL2A_20151022T222102_T01KBU/S2A_MSIL2A_20151022T222102_T01KBU_WVP_10m.tif",
+         "type":"image/tiff; application=geotiff; profile=cloud-optimized",
+         "proj:transform":[
+
+         ],
+         "proj:shape":[
+
+         ],
+         "eo:bands":[
+            {
+               "name":"something",
+               "common_name":"something",
+               "description":"TBD"
+            }
+         ]
+      },
+      "nir":{
+         "href":"common_sensing/fiji/sentinel_2/S2A_MSIL2A_20151022T222102_T01KBU/S2A_MSIL2A_20151022T222102_T01KBU_B08_10m.tif",
+         "type":"image/tiff; application=geotiff; profile=cloud-optimized",
+         "proj:transform":[
+
+         ],
+         "proj:shape":[
+
+         ],
+         "eo:bands":[
+            {
+               "name":"nir",
+               "common_name":"nir",
+               "description":"TBD"
+            }
+         ]
+      },
+      "nir09":{
+         "href":"common_sensing/fiji/sentinel_2/S2A_MSIL2A_20151022T222102_T01KBU/S2A_MSIL2A_20151022T222102_T01KBU_B09_60m.tif",
+         "type":"image/tiff; application=geotiff; profile=cloud-optimized",
+         "proj:transform":[
+
+         ],
+         "proj:shape":[
+
+         ],
+         "eo:bands":[
+            {
                "name":"nir09",
                "common_name":"nir09",
                "description":"TBD"
@@ -275,19 +230,10 @@
          "href":"common_sensing/fiji/sentinel_2/S2A_MSIL2A_20151022T222102_T01KBU/S2A_MSIL2A_20151022T222102_T01KBU_B11_20m.tif",
          "type":"image/tiff; application=geotiff; profile=cloud-optimized",
          "proj:transform":[
-            20.0,
-            0.0,
-            199980.0,
-            0.0,
-            -20.0,
-            7900000.0,
-            0.0,
-            0.0,
-            1.0
+
          ],
          "proj:shape":[
-            5490,
-            5490
+
          ],
          "eo:bands":[
             {
@@ -301,19 +247,10 @@
          "href":"common_sensing/fiji/sentinel_2/S2A_MSIL2A_20151022T222102_T01KBU/S2A_MSIL2A_20151022T222102_T01KBU_B12_20m.tif",
          "type":"image/tiff; application=geotiff; profile=cloud-optimized",
          "proj:transform":[
-            20.0,
-            0.0,
-            199980.0,
-            0.0,
-            -20.0,
-            7900000.0,
-            0.0,
-            0.0,
-            1.0
+
          ],
          "proj:shape":[
-            5490,
-            5490
+
          ],
          "eo:bands":[
             {
@@ -327,19 +264,10 @@
          "href":"common_sensing/fiji/sentinel_2/S2A_MSIL2A_20151022T222102_T01KBU/S2A_MSIL2A_20151022T222102_T01KBU_B8A_20m.tif",
          "type":"image/tiff; application=geotiff; profile=cloud-optimized",
          "proj:transform":[
-            20.0,
-            0.0,
-            199980.0,
-            0.0,
-            -20.0,
-            7900000.0,
-            0.0,
-            0.0,
-            1.0
+
          ],
          "proj:shape":[
-            5490,
-            5490
+
          ],
          "eo:bands":[
             {
@@ -353,19 +281,10 @@
          "href":"common_sensing/fiji/sentinel_2/S2A_MSIL2A_20151022T222102_T01KBU/S2A_MSIL2A_20151022T222102_T01KBU_SCL_20m.tif",
          "type":"image/tiff; application=geotiff; profile=cloud-optimized",
          "proj:transform":[
-            20.0,
-            0.0,
-            199980.0,
-            0.0,
-            -20.0,
-            7900000.0,
-            0.0,
-            0.0,
-            1.0
+
          ],
          "proj:shape":[
-            5490,
-            5490
+
          ],
          "eo:bands":[
             {

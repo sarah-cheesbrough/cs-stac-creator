@@ -8,7 +8,7 @@ BUCKET = 'public-eo-data'
 
 def initialise_cs_bucket(s3_resource, bucket_name):
     s3_resource.create_bucket(Bucket=bucket_name)
-    for file in Path('tests/data/sentinel_2').glob('**/*.tif'):
+    for file in Path('tests/data/common_sensing/fiji/sentinel_2').glob('**/*.tif'):
         s3_resource.Bucket(bucket_name).upload_file(
             Filename=str(file),
             Key=f"common_sensing/fiji/sentinel_2/{file.parent.stem}/{file.name}"
@@ -95,7 +95,7 @@ def test_get_product_raster():
                                                   'S2A_MSIL2A_20151022T222102_T01KBU/'
                                                   'S2A_MSIL2A_20151022T222102_T01KBU_B02_10m.tif')
 
-    file = 'tests/data/sentinel_2/S2A_MSIL2A_20151022T222102_T01KBU/S2A_MSIL2A_20151022T222102_T01KBU_B02_10m.tif'
+    file = 'tests/data/common_sensing/fiji/sentinel_2/S2A_MSIL2A_20151022T222102_T01KBU/S2A_MSIL2A_20151022T222102_T01KBU_B02_10m.tif'
 
     # Open raster file as bytes
     with open(file, "rb") as r:
