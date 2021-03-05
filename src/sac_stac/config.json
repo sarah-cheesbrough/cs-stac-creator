@@ -164,7 +164,7 @@
       "id": "landsat_8",
       "title": "USGS Landsat-8 Datasets",
       "description":"A collection of Landsat-8 datasets. Surface reflectance products ordered via ESPA and prepared by Catapult.",
-      "s3_url": "https://s3-uk-1.sa-catapult.co.uk/public-eo-data/common_sensing/fiji/landsat_8",
+      "s3_url": "https://s3-uk-1.sa-catapult.co.uk/public-eo-data/common_sensing/fiji/landsat_8/",
       "formatting": {
         "date": {
           "regex": "(\\d{8})",
