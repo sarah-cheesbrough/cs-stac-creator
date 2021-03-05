@@ -1,4 +1,4 @@
-from src.sac_stac.util import unparse_s3_url
+from sac_stac.util import unparse_s3_url
 
 
 def test_unparse_s3_url():

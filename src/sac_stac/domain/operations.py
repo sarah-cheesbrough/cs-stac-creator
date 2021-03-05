@@ -9,8 +9,8 @@ from rasterio import RasterioIOError
 from rasterio.crs import CRS
 from shapely.geometry import box, Polygon
 
-from src.sac_stac.load_config import LOG_LEVEL, LOG_FORMAT
-from src.sac_stac.util import extract_common_prefix
+from sac_stac.load_config import LOG_LEVEL, LOG_FORMAT
+from sac_stac.util import extract_common_prefix
 
 
 logging.basicConfig(level=LOG_LEVEL, format=LOG_FORMAT)

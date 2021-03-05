@@ -1,6 +1,6 @@
 from typing import List
 
-from src.sac_stac.domain.s3 import S3
+from sac_stac.domain.s3 import S3
 
 
 class S3Repository:

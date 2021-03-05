@@ -1,6 +1,6 @@
 from moto import mock_s3
-from src.sac_stac.adapters import repository
-from src.sac_stac.domain.s3 import S3
+from sac_stac.adapters import repository
+from sac_stac.domain.s3 import S3
 from pathlib import Path
 
 BUCKET = 'public-eo-data'

@@ -2,7 +2,7 @@ import logging
 
 import boto3
 from botocore.exceptions import ClientError
-from src.sac_stac.load_config import LOG_LEVEL, LOG_FORMAT
+from sac_stac.load_config import LOG_LEVEL, LOG_FORMAT
 
 logging.basicConfig(level=LOG_LEVEL, format=LOG_FORMAT)
 

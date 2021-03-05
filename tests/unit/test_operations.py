@@ -2,9 +2,9 @@ from shapely.geometry import Polygon
 from datetime import datetime
 from rasterio.crs import CRS
 
-from src.sac_stac.domain.operations import obtain_date_from_filename, get_bands_from_product_keys, \
+from sac_stac.domain.operations import obtain_date_from_filename, get_bands_from_product_keys, \
     get_geometry_from_cog, get_projection_from_cog
-from src.sac_stac.util import get_files_from_dir
+from sac_stac.util import get_files_from_dir
 
 
 def test_obtain_date_from_filename_sentinel():

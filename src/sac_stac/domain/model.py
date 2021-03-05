@@ -1,6 +1,6 @@
 from pystac import Collection, Item, Provider, STAC_EXTENSIONS
 
-from src.sac_stac.domain.extensions import register_product_definition_extension
+from sac_stac.domain.extensions import register_product_definition_extension
 
 
 class SacCollection(Collection):
