@@ -19,6 +19,11 @@
          "type":"application/json"
       },
       {
+         "rel":"child",
+         "href":"https://s3-uk-1.sa-catapult.co.uk/public-eo-data/stac_catalogs/cs_stac/landsat_7/collection.json",
+         "type":"application/json"
+      },
+      {
          "rel":"self",
          "href":"https://s3-uk-1.sa-catapult.co.uk/public-eo-data/stac_catalogs/cs_stac/catalog.json",
          "type":"application/json"
