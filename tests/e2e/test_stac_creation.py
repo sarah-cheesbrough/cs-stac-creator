@@ -94,23 +94,24 @@ def test_stac_files_creation():
             bands = map(mapped_bands.get, get_bands_from_product_keys(product_keys))
 
             for product_key, band in zip(product_keys, bands):
-                asset = Asset(
-                    href=product_key,
-                    media_type=MediaType.COG
-                )
+                if band:
+                    asset = Asset(
+                        href=product_key,
+                        media_type=MediaType.COG
+                    )
 
-                # Set Projection                                         ** ONLY FOR TESTING **
-                proj_shp, proj_tran = get_projection_from_cog(f'tests/data/{product_key}')
-                item.ext.projection.set_transform(proj_tran, asset)
-                item.ext.projection.set_shape(proj_shp, asset)
+                    # Set Projection                                         ** ONLY FOR TESTING **
+                    proj_shp, proj_tran = get_projection_from_cog(f'tests/data/{product_key}')
+                    item.ext.projection.set_transform(proj_tran, asset)
+                    item.ext.projection.set_shape(proj_shp, asset)
 
-                # Set bands
-                item.ext.eo.set_bands([Band.create(
-                    name=band, description='TBD', common_name=band)],
-                    asset
-                )
+                    # Set bands
+                    item.ext.eo.set_bands([Band.create(
+                        name=band, description='TBD', common_name=band)],
+                        asset
+                    )
 
-                item.add_asset(key=band, asset=asset)
+                    item.add_asset(key=band, asset=asset)
 
             items.append(item)
             collection.add_item(item)
@@ -122,7 +123,7 @@ def test_stac_files_creation():
     catalog.validate_all()
 
     assert catalog.to_dict() == load_json('tests/output/catalog.json')
-    for sensor in config.get('sensors'):
-        assert collection.to_dict() == load_json(f"tests/output/{sensor.get('id')}/collection.json")
-    for item in items:
-        assert item.to_dict() == load_json(f'tests/output/{item.collection_id}/{item.id}/{item.id}.json')
+    for collection in [c.target for c in catalog.links if c.rel == 'child']:
+        assert collection.to_dict() == load_json(f"tests/output/{collection.id}/collection.json")
+        for item in [i.target for i in collection.links if i.rel == 'item']:
+            assert item.to_dict() == load_json(f'tests/output/{item.collection_id}/{item.id}/{item.id}.json')
