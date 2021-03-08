@@ -63,8 +63,127 @@
       }
    ],
    "assets":{
+      "coastal":{
+         "href":"",
+         "type":"image/tiff; application=geotiff; profile=cloud-optimized",
+         "proj:transform":[
+
+         ],
+         "proj:shape":[
+
+         ],
+         "eo:bands":[
+            {
+               "name":"coastal",
+               "common_name":"coastal",
+               "description":"TBD"
+            }
+         ]
+      },
+      "blue":{
+         "href":"",
+         "type":"image/tiff; application=geotiff; profile=cloud-optimized",
+         "proj:transform":[
+
+         ],
+         "proj:shape":[
+
+         ],
+         "eo:bands":[
+            {
+               "name":"blue",
+               "common_name":"blue",
+               "description":"TBD"
+            }
+         ]
+      },
+      "green":{
+         "href":"",
+         "type":"image/tiff; application=geotiff; profile=cloud-optimized",
+         "proj:transform":[
+
+         ],
+         "proj:shape":[
+
+         ],
+         "eo:bands":[
+            {
+               "name":"green",
+               "common_name":"green",
+               "description":"TBD"
+            }
+         ]
+      },
+      "red":{
+         "href":"",
+         "type":"image/tiff; application=geotiff; profile=cloud-optimized",
+         "proj:transform":[
+
+         ],
+         "proj:shape":[
+
+         ],
+         "eo:bands":[
+            {
+               "name":"red",
+               "common_name":"red",
+               "description":"TBD"
+            }
+         ]
+      },
+      "nir08":{
+         "href":"",
+         "type":"image/tiff; application=geotiff; profile=cloud-optimized",
+         "proj:transform":[
+
+         ],
+         "proj:shape":[
+
+         ],
+         "eo:bands":[
+            {
+               "name":"nir08",
+               "common_name":"nir08",
+               "description":"TBD"
+            }
+         ]
+      },
+      "swir16":{
+         "href":"",
+         "type":"image/tiff; application=geotiff; profile=cloud-optimized",
+         "proj:transform":[
+
+         ],
+         "proj:shape":[
+
+         ],
+         "eo:bands":[
+            {
+               "name":"swir16",
+               "common_name":"swir16",
+               "description":"TBD"
+            }
+         ]
+      },
+      "swir22":{
+         "href":"",
+         "type":"image/tiff; application=geotiff; profile=cloud-optimized",
+         "proj:transform":[
+
+         ],
+         "proj:shape":[
+
+         ],
+         "eo:bands":[
+            {
+               "name":"swir22",
+               "common_name":"swir22",
+               "description":"TBD"
+            }
+         ]
+      },
       "lwir11":{
-         "href":"common_sensing/fiji/landsat_8/LC08_L1TP_076071_20200622/LC08_L1GT_076071_20200622_20200707_01_T2_bt_band10.tif",
+         "href":"",
          "type":"image/tiff; application=geotiff; profile=cloud-optimized",
          "proj:transform":[
 
@@ -80,14 +199,40 @@
             }
          ]
       },
-      "pixel_qa":{
-         "href":"common_sensing/fiji/landsat_8/LC08_L1TP_076071_20200622/LC08_L1GT_076071_20200622_20200707_01_T2_pixel_qa.tif",
+      "lwir12":{
+         "href":"",
          "type":"image/tiff; application=geotiff; profile=cloud-optimized",
          "proj:transform":[
 
          ],
          "proj:shape":[
 
+         ],
+         "eo:bands":[
+            {
+               "name":"lwir12",
+               "common_name":"lwir12",
+               "description":"TBD"
+            }
+         ]
+      },
+      "pixel_qa":{
+         "href":"common_sensing/fiji/landsat_8/LC08_L1TP_076071_20200622/LC08_L1GT_076071_20200622_20200707_01_T2_pixel_qa.tif",
+         "type":"image/tiff; application=geotiff; profile=cloud-optimized",
+         "proj:transform":[
+            30.0,
+            0.0,
+            289185.0,
+            0.0,
+            -30.0,
+            -1642485.0,
+            0.0,
+            0.0,
+            1.0
+         ],
+         "proj:shape":[
+            7731,
+            7611
          ],
          "eo:bands":[
             {
@@ -124,7 +269,7 @@
          ]
       },
       "aerosol":{
-         "href":"common_sensing/fiji/landsat_8/LC08_L1TP_076071_20200622/LC08_L1GT_076071_20200622_20200707_01_T2_sr_aerosol.tif",
+         "href":"",
          "type":"image/tiff; application=geotiff; profile=cloud-optimized",
          "proj:transform":[
 
@@ -136,125 +281,6 @@
             {
                "name":"aerosol",
                "common_name":"aerosol",
-               "description":"TBD"
-            }
-         ]
-      },
-      "coastal":{
-         "href":"common_sensing/fiji/landsat_8/LC08_L1TP_076071_20200622/LC08_L1GT_076071_20200622_20200707_01_T2_sr_band1.tif",
-         "type":"image/tiff; application=geotiff; profile=cloud-optimized",
-         "proj:transform":[
-
-         ],
-         "proj:shape":[
-
-         ],
-         "eo:bands":[
-            {
-               "name":"coastal",
-               "common_name":"coastal",
-               "description":"TBD"
-            }
-         ]
-      },
-      "blue":{
-         "href":"common_sensing/fiji/landsat_8/LC08_L1TP_076071_20200622/LC08_L1GT_076071_20200622_20200707_01_T2_sr_band2.tif",
-         "type":"image/tiff; application=geotiff; profile=cloud-optimized",
-         "proj:transform":[
-
-         ],
-         "proj:shape":[
-
-         ],
-         "eo:bands":[
-            {
-               "name":"blue",
-               "common_name":"blue",
-               "description":"TBD"
-            }
-         ]
-      },
-      "green":{
-         "href":"common_sensing/fiji/landsat_8/LC08_L1TP_076071_20200622/LC08_L1GT_076071_20200622_20200707_01_T2_sr_band3.tif",
-         "type":"image/tiff; application=geotiff; profile=cloud-optimized",
-         "proj:transform":[
-
-         ],
-         "proj:shape":[
-
-         ],
-         "eo:bands":[
-            {
-               "name":"green",
-               "common_name":"green",
-               "description":"TBD"
-            }
-         ]
-      },
-      "red":{
-         "href":"common_sensing/fiji/landsat_8/LC08_L1TP_076071_20200622/LC08_L1GT_076071_20200622_20200707_01_T2_sr_band4.tif",
-         "type":"image/tiff; application=geotiff; profile=cloud-optimized",
-         "proj:transform":[
-
-         ],
-         "proj:shape":[
-
-         ],
-         "eo:bands":[
-            {
-               "name":"red",
-               "common_name":"red",
-               "description":"TBD"
-            }
-         ]
-      },
-      "nir08":{
-         "href":"common_sensing/fiji/landsat_8/LC08_L1TP_076071_20200622/LC08_L1GT_076071_20200622_20200707_01_T2_sr_band5.tif",
-         "type":"image/tiff; application=geotiff; profile=cloud-optimized",
-         "proj:transform":[
-
-         ],
-         "proj:shape":[
-
-         ],
-         "eo:bands":[
-            {
-               "name":"nir08",
-               "common_name":"nir08",
-               "description":"TBD"
-            }
-         ]
-      },
-      "swir16":{
-         "href":"common_sensing/fiji/landsat_8/LC08_L1TP_076071_20200622/LC08_L1GT_076071_20200622_20200707_01_T2_sr_band6.tif",
-         "type":"image/tiff; application=geotiff; profile=cloud-optimized",
-         "proj:transform":[
-
-         ],
-         "proj:shape":[
-
-         ],
-         "eo:bands":[
-            {
-               "name":"swir16",
-               "common_name":"swir16",
-               "description":"TBD"
-            }
-         ]
-      },
-      "swir22":{
-         "href":"common_sensing/fiji/landsat_8/LC08_L1TP_076071_20200622/LC08_L1GT_076071_20200622_20200707_01_T2_sr_band7.tif",
-         "type":"image/tiff; application=geotiff; profile=cloud-optimized",
-         "proj:transform":[
-
-         ],
-         "proj:shape":[
-
-         ],
-         "eo:bands":[
-            {
-               "name":"swir22",
-               "common_name":"swir22",
                "description":"TBD"
             }
          ]
