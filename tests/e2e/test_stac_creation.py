@@ -89,29 +89,36 @@ def test_stac_files_creation():
             item.add_common_metadata(sensor.get('common_metadata'))
 
             bands_metadata = sensor.get('extensions').get('eo').get('bands')
-            mapped_bands = {b.get('name'): b.get('common_name') for b in bands_metadata}
             product_keys = repo.get_product_keys(bucket=bucket, products_prefix=acquisition_key)
-            bands = map(mapped_bands.get, get_bands_from_product_keys(product_keys))
+            bands = get_bands_from_product_keys(product_keys)
 
-            for product_key, band in zip(product_keys, bands):
-                if band:
-                    asset = Asset(
-                        href=product_key,
-                        media_type=MediaType.COG
-                    )
+            for band_name, band_common_name in [(b.get('name'), b.get('common_name')) for b in bands_metadata]:
 
-                    # Set Projection                                         ** ONLY FOR TESTING **
+                product_key = ''
+                proj_shp = []
+                proj_tran = []
+
+                if band_name in bands:
+                    product_key = [k for k in product_keys if band_name in k][0]
+                    #                                               ** ONLY FOR TESTING **
                     proj_shp, proj_tran = get_projection_from_cog(f'tests/data/{product_key}')
-                    item.ext.projection.set_transform(proj_tran, asset)
-                    item.ext.projection.set_shape(proj_shp, asset)
 
-                    # Set bands
-                    item.ext.eo.set_bands([Band.create(
-                        name=band, description='TBD', common_name=band)],
-                        asset
-                    )
+                asset = Asset(
+                    href=product_key,
+                    media_type=MediaType.COG
+                )
 
-                    item.add_asset(key=band, asset=asset)
+                # Set Projection
+                item.ext.projection.set_transform(proj_tran, asset)
+                item.ext.projection.set_shape(proj_shp, asset)
+
+                # Set bands
+                item.ext.eo.set_bands([Band.create(
+                    name=band_common_name, description='TBD', common_name=band_common_name)],
+                    asset
+                )
+
+                item.add_asset(key=band_common_name, asset=asset)
 
             items.append(item)
             collection.add_item(item)
