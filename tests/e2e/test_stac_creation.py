@@ -85,6 +85,9 @@ def test_stac_files_creation():
                 properties={}
             )
 
+            item.ext.enable('projection')
+            item.ext.projection.epsg = crs.to_epsg()
+
             item.add_extensions(sensor.get('extensions'))
             item.add_common_metadata(sensor.get('common_metadata'))
 
