@@ -42,8 +42,8 @@
       "temporal":{
          "interval":[
             [
-               "2020-01-04T00:00:00Z",
-               "2020-01-04T00:00:00Z"
+               "2002-01-04T00:00:00Z",
+               "2002-01-04T00:00:00Z"
             ]
          ]
       }
@@ -71,7 +71,7 @@
       "product_definition:metadata_type":"eo3",
       "product_definition:metadata":{
          "product":{
-            "name":"landsat_8"
+            "name":"landsat_7"
          }
       },
       "product_definition:measurements":[
