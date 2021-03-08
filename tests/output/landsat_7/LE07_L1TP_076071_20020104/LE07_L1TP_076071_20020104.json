@@ -90,22 +90,13 @@
          ]
       },
       "green":{
-         "href":"common_sensing/fiji/landsat_7/LE07_L1TP_076071_20020104/LE07_L1GT_076071_20020104_20170201_01_T2_sr_band2.tif",
+         "href":"",
          "type":"image/tiff; application=geotiff; profile=cloud-optimized",
          "proj:transform":[
-            30.0,
-            0.0,
-            289185.0,
-            0.0,
-            -30.0,
-            -1642485.0,
-            0.0,
-            0.0,
-            1.0
+
          ],
          "proj:shape":[
-            7731,
-            7611
+
          ],
          "eo:bands":[
             {
@@ -201,13 +192,22 @@
          ]
       },
       "pixel_qa":{
-         "href":"",
+         "href":"common_sensing/fiji/landsat_7/LE07_L1TP_076071_20020104/LE07_L1GT_076071_20020104_20170201_01_T2_pixel_qa.tif",
          "type":"image/tiff; application=geotiff; profile=cloud-optimized",
          "proj:transform":[
-
+            30.0,
+            0.0,
+            289185.0,
+            0.0,
+            -30.0,
+            -1642485.0,
+            0.0,
+            0.0,
+            1.0
          ],
          "proj:shape":[
-
+            7731,
+            7611
          ],
          "eo:bands":[
             {
