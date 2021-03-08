@@ -32,10 +32,6 @@ class SacItem(Item):
         self.common_metadata.constellation = common_metadata_config.get('constellation')
 
     def add_extensions(self, extensions_config: dict):
-        if extensions_config.get('projection'):
-            self.ext.enable('projection')
-            self.ext.projection.epsg = extensions_config.get('projection').get('epsg')
-
         if extensions_config.get('eo'):
             self.ext.enable('eo')
             self.ext.eo.cloud_cover = extensions_config.get('eo').get('cloud_cover')

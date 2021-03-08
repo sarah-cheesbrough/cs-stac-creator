@@ -3,7 +3,7 @@
    "stac_version":"1.0.0-beta.2",
    "id":"S2A_MSIL2A_20151022T222102_T01KBU",
    "properties":{
-      "proj:epsg":4326,
+      "proj:epsg":32701,
       "eo:cloud_cover":0.0,
       "gsd":10,
       "platform":"sentinel_2",

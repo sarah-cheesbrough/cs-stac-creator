@@ -3,7 +3,7 @@
    "stac_version":"1.0.0-beta.2",
    "id":"LT05_L1TP_075073_19911225",
    "properties":{
-      "proj:epsg":4326,
+      "proj:epsg":32660,
       "eo:cloud_cover":0.0,
       "gsd":30,
       "platform":"landsat_5",
