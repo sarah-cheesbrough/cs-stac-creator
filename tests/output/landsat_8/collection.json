@@ -10,7 +10,7 @@
       },
       {
          "rel":"item",
-         "href":"https://s3-uk-1.sa-catapult.co.uk/public-eo-data/stac_catalogs/cs_stac/landsat_8/LC08_L1TP_076071_20200622/LC08_L1GT_076071_20200622.json",
+         "href":"https://s3-uk-1.sa-catapult.co.uk/public-eo-data/stac_catalogs/cs_stac/landsat_8/LC08_L1TP_076071_20200622/LC08_L1TP_076071_20200622.json",
          "type":"application/json"
       },
       {
@@ -32,7 +32,10 @@
       "spatial":{
          "bbox":[
             [
-
+               289185.0,
+               -1874415.0,
+               517515.0,
+               -1642485.0
             ]
          ]
       },
@@ -109,6 +112,12 @@
             "nodata":-9999
          },
          {
+            "name":"swir22",
+            "units":"1",
+            "dtype":"uint16",
+            "nodata":-9999
+         },
+         {
             "name":"lwir11",
             "units":"1",
             "dtype":"uint16",
@@ -135,7 +144,7 @@
          {
             "name":"aerosol",
             "units":"1",
-            "dtype":"uint8",
+            "dtype":"uint16",
             "nodata":-9999
          }
       ]
