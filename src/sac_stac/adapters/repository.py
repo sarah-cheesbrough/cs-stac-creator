@@ -1,6 +1,14 @@
+import json
 from typing import List
+from urllib.parse import urlparse
 
-from sac_stac.domain.s3 import S3
+import botocore
+from pystac import STAC_IO
+from sac_stac.domain.s3 import S3, NoObjectError
+from sac_stac.load_config import get_s3_configuration
+from sac_stac.util import parse_s3_url
+
+S3_ENDPOINT = get_s3_configuration()["endpoint"]
 
 
 class S3Repository:
@@ -23,3 +31,30 @@ class S3Repository:
 
     def get_product_raster(self, bucket: str, product_key: str) -> bytes:
         return self.s3.get_object_body(bucket_name=bucket, object_name=product_key)
+
+    def get_dict(self, bucket: str, key: str) -> dict:
+        try:
+            catalog_body = self.s3.get_object_body(bucket_name=bucket, object_name=key)
+            return json.loads(catalog_body.decode('utf-8'))
+        except NoObjectError:
+            raise
+
+    def add_json_from_dict(self, bucket: str, key: str, stac_dict: dict):
+        response = self.s3.put_object(
+            bucket_name=bucket,
+            key=key,
+            body=json.dumps(stac_dict)
+        )
+        return response.get('ResponseMetadata').get('HTTPStatusCode')
+
+    def stac_read_method(self, uri):
+        parsed = urlparse(uri)
+        if parsed.hostname in S3_ENDPOINT:
+            try:
+                bucket, key = parse_s3_url(uri)
+                body = self.s3.get_object_body(bucket_name=bucket, object_name=key)
+                return body.decode('utf-8')
+            except NoObjectError:
+                raise
+        else:
+            return STAC_IO.default_read_text_method(uri)
