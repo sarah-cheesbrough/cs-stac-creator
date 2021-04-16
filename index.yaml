@@ -1,0 +1,18 @@
+apiVersion: v1
+entries:
+  stac-creator:
+  - apiVersion: v2
+    appVersion: 8f0c7df
+    created: "2021-04-16T14:48:05.617023141Z"
+    description: A Helm chart for Kubernetes
+    digest: 124d8072a3c0ac3f258c1bf75c587f67e6191ffbe748eb0f681ceca234f14b8b
+    home: https://github.com/SatelliteApplicationsCatapult/cs-stac-creator
+    maintainers:
+    - email: juan.macias@sa.catapult.org.uk
+      name: SatelliteApplicationsCatapult
+    name: stac-creator
+    type: application
+    urls:
+    - https://github.com/SatelliteApplicationsCatapult/cs-stac-creator/releases/download/stac-creator-0.1.0/stac-creator-0.1.0.tgz
+    version: 0.1.0
+generated: "2021-04-16T14:48:05.617027241Z"
