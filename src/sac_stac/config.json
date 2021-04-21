@@ -1332,6 +1332,684 @@
           }
         }
       }
+    },
+    {
+      "id": "SPOT1_MS",
+      "title": "SPOT1_MS datasets",
+      "description": "A collection of SPOT1_MS datasets. Procured from Airbus, prepared by GRID-Geneva.",
+      "s3_url": "https://s3-uk-1.sa-catapult.co.uk/public-eo-data/common_sensing/fiji/SPOT1_MS/",
+      "formatting": {
+        "date": {
+          "regex": "^.{7}(\\d{12})",
+          "format": "%y%m%d%H%M%S"
+        }
+      },
+      "providers": [
+        {
+          "name": "Airbus Defence & Space",
+          "roles": [
+            "producer",
+            "licensor"
+          ],
+          "url": "https://www.airbus.com/space.html"
+        },
+        {
+          "name": "GRID-Geneva",
+          "roles": [
+            "processor"
+          ],
+          "url": "https://unepgrid.ch/en"
+        },
+        {
+          "name": "Satellite Applications Catapult",
+          "roles": [
+            "host"
+          ],
+          "url": "https://sa.catapult.org.uk/"
+        }
+      ],
+      "common_metadata": {
+        "gsd": 20,
+        "instruments": [
+          "HRV"
+        ],
+        "constellation": "SPOT1_MS",
+        "platform": "SPOT1_MS"
+      },
+      "extensions": {
+        "cloud_cover": 0.0,
+        "eo": {
+          "bands": [
+            {
+              "name": "XS1",
+              "common_name": "green",
+              "units": "1",
+              "dtype": "uint16",
+              "nodata": -9999
+            },
+            {
+              "name": "XS2",
+              "common_name": "red",
+              "units": "1",
+              "dtype": "uint16",
+              "nodata": -9999
+            },
+            {
+              "name": "XS3",
+              "common_name": "nir",
+              "units": "1",
+              "dtype": "uint16",
+              "nodata": -9999
+            }
+          ]
+        },
+        "product_definition": {
+          "metadata_type": "eo3",
+          "metadata": {
+            "product": {
+              "name": "SPOT1_MS"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "SPOT2_MS",
+      "title": "SPOT2_MS datasets",
+      "description": "A collection of SPOT2_MS datasets. Procured from Airbus, prepared by GRID-Geneva.",
+      "s3_url": "https://s3-uk-1.sa-catapult.co.uk/public-eo-data/common_sensing/fiji/SPOT2_MS/",
+      "formatting": {
+        "date": {
+          "regex": "^.{7}(\\d{12})",
+          "format": "%y%m%d%H%M%S"
+        }
+      },
+      "providers": [
+        {
+          "name": "Airbus Defence & Space",
+          "roles": [
+            "producer",
+            "licensor"
+          ],
+          "url": "https://www.airbus.com/space.html"
+        },
+        {
+          "name": "GRID-Geneva",
+          "roles": [
+            "processor"
+          ],
+          "url": "https://unepgrid.ch/en"
+        },
+        {
+          "name": "Satellite Applications Catapult",
+          "roles": [
+            "host"
+          ],
+          "url": "https://sa.catapult.org.uk/"
+        }
+      ],
+      "common_metadata": {
+        "gsd": 20,
+        "instruments": [
+          "HRV"
+        ],
+        "constellation": "SPOT2_MS",
+        "platform": "SPOT2_MS"
+      },
+      "extensions": {
+        "cloud_cover": 0.0,
+        "eo": {
+          "bands": [
+            {
+              "name": "XS1",
+              "common_name": "green",
+              "units": "1",
+              "dtype": "uint16",
+              "nodata": -9999
+            },
+            {
+              "name": "XS2",
+              "common_name": "red",
+              "units": "1",
+              "dtype": "uint16",
+              "nodata": -9999
+            },
+            {
+              "name": "XS3",
+              "common_name": "nir",
+              "units": "1",
+              "dtype": "uint16",
+              "nodata": -9999
+            }
+          ]
+        },
+        "product_definition": {
+          "metadata_type": "eo3",
+          "metadata": {
+            "product": {
+              "name": "SPOT2_MS"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "SPOT3_MS",
+      "title": "SPOT3_MS datasets",
+      "description": "A collection of SPOT3_MS datasets. Procured from Airbus, prepared by GRID-Geneva.",
+      "s3_url": "https://s3-uk-1.sa-catapult.co.uk/public-eo-data/common_sensing/fiji/SPOT3_MS/",
+      "formatting": {
+        "date": {
+          "regex": "^.{7}(\\d{12})",
+          "format": "%y%m%d%H%M%S"
+        }
+      },
+      "providers": [
+        {
+          "name": "Airbus Defence & Space",
+          "roles": [
+            "producer",
+            "licensor"
+          ],
+          "url": "https://www.airbus.com/space.html"
+        },
+        {
+          "name": "GRID-Geneva",
+          "roles": [
+            "processor"
+          ],
+          "url": "https://unepgrid.ch/en"
+        },
+        {
+          "name": "Satellite Applications Catapult",
+          "roles": [
+            "host"
+          ],
+          "url": "https://sa.catapult.org.uk/"
+        }
+      ],
+      "common_metadata": {
+        "gsd": 20,
+        "instruments": [
+          "HRV"
+        ],
+        "constellation": "SPOT3_MS",
+        "platform": "SPOT3_MS"
+      },
+      "extensions": {
+        "cloud_cover": 0.0,
+        "eo": {
+          "bands": [
+            {
+              "name": "XS1",
+              "common_name": "green",
+              "units": "1",
+              "dtype": "uint16",
+              "nodata": -9999
+            },
+            {
+              "name": "XS2",
+              "common_name": "red",
+              "units": "1",
+              "dtype": "uint16",
+              "nodata": -9999
+            },
+            {
+              "name": "XS3",
+              "common_name": "nir",
+              "units": "1",
+              "dtype": "uint16",
+              "nodata": -9999
+            }
+          ]
+        },
+        "product_definition": {
+          "metadata_type": "eo3",
+          "metadata": {
+            "product": {
+              "name": "SPOT3_MS"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "SPOT4_MS",
+      "title": "SPOT4_MS datasets",
+      "description": "A collection of SPOT4_MS datasets. Procured from Airbus, prepared by GRID-Geneva.",
+      "s3_url": "https://s3-uk-1.sa-catapult.co.uk/public-eo-data/common_sensing/fiji/SPOT4_MS/",
+      "formatting": {
+        "date": {
+          "regex": "^.{7}(\\d{12})",
+          "format": "%y%m%d%H%M%S"
+        }
+      },
+      "providers": [
+        {
+          "name": "Airbus Defence & Space",
+          "roles": [
+            "producer",
+            "licensor"
+          ],
+          "url": "https://www.airbus.com/space.html"
+        },
+        {
+          "name": "GRID-Geneva",
+          "roles": [
+            "processor"
+          ],
+          "url": "https://unepgrid.ch/en"
+        },
+        {
+          "name": "Satellite Applications Catapult",
+          "roles": [
+            "host"
+          ],
+          "url": "https://sa.catapult.org.uk/"
+        }
+      ],
+      "common_metadata": {
+        "gsd": 20,
+        "instruments": [
+          "HRV"
+        ],
+        "constellation": "SPOT4_MS",
+        "platform": "SPOT4_MS"
+      },
+      "extensions": {
+        "cloud_cover": 0.0,
+        "eo": {
+          "bands": [
+            {
+              "name": "XS1",
+              "common_name": "green",
+              "units": "1",
+              "dtype": "uint16",
+              "nodata": -9999
+            },
+            {
+              "name": "XS2",
+              "common_name": "red",
+              "units": "1",
+              "dtype": "uint16",
+              "nodata": -9999
+            },
+            {
+              "name": "XS3",
+              "common_name": "nir",
+              "units": "1",
+              "dtype": "uint16",
+              "nodata": -9999
+            },
+            {
+              "name": "XS4",
+              "common_name": "swir16",
+              "units": "1",
+              "dtype": "uint16",
+              "nodata": -9999
+            }
+          ]
+        },
+        "product_definition": {
+          "metadata_type": "eo3",
+          "metadata": {
+            "product": {
+              "name": "SPOT4_MS"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "SPOT5_MS",
+      "title": "SPOT5_MS datasets",
+      "description": "A collection of SPOT5_MS datasets. Procured from Airbus, prepared by GRID-Geneva.",
+      "s3_url": "https://s3-uk-1.sa-catapult.co.uk/public-eo-data/common_sensing/fiji/SPOT5_MS/",
+      "formatting": {
+        "date": {
+          "regex": "^.{7}(\\d{12})",
+          "format": "%y%m%d%H%M%S"
+        }
+      },
+      "providers": [
+        {
+          "name": "Airbus Defence & Space",
+          "roles": [
+            "producer",
+            "licensor"
+          ],
+          "url": "https://www.airbus.com/space.html"
+        },
+        {
+          "name": "GRID-Geneva",
+          "roles": [
+            "processor"
+          ],
+          "url": "https://unepgrid.ch/en"
+        },
+        {
+          "name": "Satellite Applications Catapult",
+          "roles": [
+            "host"
+          ],
+          "url": "https://sa.catapult.org.uk/"
+        }
+      ],
+      "common_metadata": {
+        "gsd": 20,
+        "instruments": [
+          "HRV"
+        ],
+        "constellation": "SPOT5_MS",
+        "platform": "SPOT5_MS"
+      },
+      "extensions": {
+        "cloud_cover": 0.0,
+        "eo": {
+          "bands": [
+            {
+              "name": "XS1",
+              "common_name": "green",
+              "units": "1",
+              "dtype": "uint16",
+              "nodata": -9999
+            },
+            {
+              "name": "XS2",
+              "common_name": "red",
+              "units": "1",
+              "dtype": "uint16",
+              "nodata": -9999
+            },
+            {
+              "name": "XS3",
+              "common_name": "nir",
+              "units": "1",
+              "dtype": "uint16",
+              "nodata": -9999
+            },
+            {
+              "name": "XS4",
+              "common_name": "swir16",
+              "units": "1",
+              "dtype": "uint16",
+              "nodata": -9999
+            }
+          ]
+        },
+        "product_definition": {
+          "metadata_type": "eo3",
+          "metadata": {
+            "product": {
+              "name": "SPOT5_MS"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "SPOT2_PAN",
+      "title": "SPOT2_PAN datasets",
+      "description": "A collection of SPOT2_PAN datasets. Procured from Airbus, prepared by GRID-Geneva.",
+      "s3_url": "https://s3-uk-1.sa-catapult.co.uk/public-eo-data/common_sensing/fiji/SPOT2_PAN/",
+      "formatting": {
+        "date": {
+          "regex": "^.{7}(\\d{12})",
+          "format": "%y%m%d%H%M%S"
+        }
+      },
+      "providers": [
+        {
+          "name": "Airbus Defence & Space",
+          "roles": [
+            "producer",
+            "licensor"
+          ],
+          "url": "https://www.airbus.com/space.html"
+        },
+        {
+          "name": "GRID-Geneva",
+          "roles": [
+            "processor"
+          ],
+          "url": "https://unepgrid.ch/en"
+        },
+        {
+          "name": "Satellite Applications Catapult",
+          "roles": [
+            "host"
+          ],
+          "url": "https://sa.catapult.org.uk/"
+        }
+      ],
+      "common_metadata": {
+        "gsd": 20,
+        "instruments": [
+          "HRV"
+        ],
+        "constellation": "SPOT2_PAN",
+        "platform": "SPOT2_PAN"
+      },
+      "extensions": {
+        "cloud_cover": 0.0,
+        "eo": {
+          "bands": [
+            {
+              "name": "PAN",
+              "common_name": "pan",
+              "units": "1",
+              "dtype": "uint16",
+              "nodata": -9999
+            }
+          ]
+        },
+        "product_definition": {
+          "metadata_type": "eo3",
+          "metadata": {
+            "product": {
+              "name": "SPOT2_PAN"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "SPOT3_PAN",
+      "title": "SPOT3_PAN datasets",
+      "description": "A collection of SPOT3_PAN datasets. Procured from Airbus, prepared by GRID-Geneva.",
+      "s3_url": "https://s3-uk-1.sa-catapult.co.uk/public-eo-data/common_sensing/fiji/SPOT3_PAN/",
+      "formatting": {
+        "date": {
+          "regex": "^.{7}(\\d{12})",
+          "format": "%y%m%d%H%M%S"
+        }
+      },
+      "providers": [
+        {
+          "name": "Airbus Defence & Space",
+          "roles": [
+            "producer",
+            "licensor"
+          ],
+          "url": "https://www.airbus.com/space.html"
+        },
+        {
+          "name": "GRID-Geneva",
+          "roles": [
+            "processor"
+          ],
+          "url": "https://unepgrid.ch/en"
+        },
+        {
+          "name": "Satellite Applications Catapult",
+          "roles": [
+            "host"
+          ],
+          "url": "https://sa.catapult.org.uk/"
+        }
+      ],
+      "common_metadata": {
+        "gsd": 20,
+        "instruments": [
+          "HRV"
+        ],
+        "constellation": "SPOT3_PAN",
+        "platform": "SPOT3_PAN"
+      },
+      "extensions": {
+        "cloud_cover": 0.0,
+        "eo": {
+          "bands": [
+            {
+              "name": "PAN",
+              "common_name": "pan",
+              "units": "1",
+              "dtype": "uint16",
+              "nodata": -9999
+            }
+          ]
+        },
+        "product_definition": {
+          "metadata_type": "eo3",
+          "metadata": {
+            "product": {
+              "name": "SPOT3_PAN"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "SPOT4_PAN",
+      "title": "SPOT4_PAN datasets",
+      "description": "A collection of SPOT4_PAN datasets. Procured from Airbus, prepared by GRID-Geneva.",
+      "s3_url": "https://s3-uk-1.sa-catapult.co.uk/public-eo-data/common_sensing/fiji/SPOT4_PAN/",
+      "formatting": {
+        "date": {
+          "regex": "^.{7}(\\d{12})",
+          "format": "%y%m%d%H%M%S"
+        }
+      },
+      "providers": [
+        {
+          "name": "Airbus Defence & Space",
+          "roles": [
+            "producer",
+            "licensor"
+          ],
+          "url": "https://www.airbus.com/space.html"
+        },
+        {
+          "name": "GRID-Geneva",
+          "roles": [
+            "processor"
+          ],
+          "url": "https://unepgrid.ch/en"
+        },
+        {
+          "name": "Satellite Applications Catapult",
+          "roles": [
+            "host"
+          ],
+          "url": "https://sa.catapult.org.uk/"
+        }
+      ],
+      "common_metadata": {
+        "gsd": 20,
+        "instruments": [
+          "HRV"
+        ],
+        "constellation": "SPOT4_PAN",
+        "platform": "SPOT4_PAN"
+      },
+      "extensions": {
+        "cloud_cover": 0.0,
+        "eo": {
+          "bands": [
+            {
+              "name": "PAN",
+              "common_name": "pan",
+              "units": "1",
+              "dtype": "uint16",
+              "nodata": -9999
+            }
+          ]
+        },
+        "product_definition": {
+          "metadata_type": "eo3",
+          "metadata": {
+            "product": {
+              "name": "SPOT4_PAN"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "SPOT5_PAN",
+      "title": "SPOT5_PAN datasets",
+      "description": "A collection of SPOT5_PAN datasets. Procured from Airbus, prepared by GRID-Geneva.",
+      "s3_url": "https://s3-uk-1.sa-catapult.co.uk/public-eo-data/common_sensing/fiji/SPOT5_PAN/",
+      "formatting": {
+        "date": {
+          "regex": "^.{7}(\\d{12})",
+          "format": "%y%m%d%H%M%S"
+        }
+      },
+      "providers": [
+        {
+          "name": "Airbus Defence & Space",
+          "roles": [
+            "producer",
+            "licensor"
+          ],
+          "url": "https://www.airbus.com/space.html"
+        },
+        {
+          "name": "GRID-Geneva",
+          "roles": [
+            "processor"
+          ],
+          "url": "https://unepgrid.ch/en"
+        },
+        {
+          "name": "Satellite Applications Catapult",
+          "roles": [
+            "host"
+          ],
+          "url": "https://sa.catapult.org.uk/"
+        }
+      ],
+      "common_metadata": {
+        "gsd": 20,
+        "instruments": [
+          "HRV"
+        ],
+        "constellation": "SPOT5_PAN",
+        "platform": "SPOT5_PAN"
+      },
+      "extensions": {
+        "cloud_cover": 0.0,
+        "eo": {
+          "bands": [
+            {
+              "name": "PAN",
+              "common_name": "pan",
+              "units": "1",
+              "dtype": "uint16",
+              "nodata": -9999
+            }
+          ]
+        },
+        "product_definition": {
+          "metadata_type": "eo3",
+          "metadata": {
+            "product": {
+              "name": "SPOT5_PAN"
+            }
+          }
+        }
+      }
     }
   ]
 }
