@@ -51,6 +51,9 @@ class S3:
         else:
             objects = list(self.s3_resource.Bucket(bucket_name).objects.all().limit(limit))
 
+        if not objects:
+            raise NoObjectError(f'Nothing found with {prefix}*{suffix} in {bucket_name} bucket')
+
         if suffix:
             return [obj for obj in objects if obj.key.endswith(suffix)]
         else:
@@ -68,7 +71,7 @@ class S3:
             return obj.get('Body').read()
         except ClientError as ex:
             if ex.response['Error']['Code'] == 'NoSuchKey':
-                raise NoObjectError
+                raise NoObjectError(f'Nothing found with {object_name} in {bucket_name} bucket')
 
     def put_object(self, bucket_name, key, body):
         try:
