@@ -1,10 +1,10 @@
 import json
 import os
-from logging import INFO
+import logging
 from pathlib import Path
 
 LOG_FORMAT = '%(asctime)s - %(levelname)6s - %(message)s'
-LOG_LEVEL = INFO
+LOG_LEVEL = logging.getLevelName(os.getenv("LOG_LEVEL", "INFO"))
 
 with open(Path(__file__).parent / "config.json") as json_data_file:
     config_file = json.load(json_data_file)
