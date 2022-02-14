@@ -1,6 +1,6 @@
 import json
 import os
-from logging import INFO
+import logging
 from pathlib import Path
 
 LOG_FORMAT = '%(asctime)s - %(levelname)6s - %(message)s'
